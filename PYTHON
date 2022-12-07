@@ -1,0 +1,31 @@
+question={ "What is the first name of Iron Man?" : "tony",
+
+     "Who is called the god of lightning in Avengers?" : "thor",
+ "Who carries a shield of American flag theme in Avengers?" : "captain america",
+
+ "Which avenger is green in color?" : "hulk",
+
+ "Which avenger can change it's size?" : "antman",
+ "Which Avenger is red in color and has mind stone?" : "vision"
+}
+import random
+questionlist=[]
+while(len(questionlist)!=5): 
+    i=random.choice(list(question.keys())) #Choose Random question from question pool and make a list of it
+    if(i not in questionlist):
+        questionlist.append(i) # make a list of random qustions
+score=0
+
+                                                  
+                                                   
+for i in questionlist:
+    print("\n"+i)
+    a=input("\nEnter ans: ")
+    if(a==question[i]):
+        print("\nRight answer! +5 points")
+        score+=5
+    else:
+        print("\nWrong answer!")
+print("\nTotal Score is :",score)
+
+
